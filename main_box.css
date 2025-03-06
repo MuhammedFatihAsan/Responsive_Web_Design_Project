@@ -1,0 +1,97 @@
+/* Temel reset */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Sayfayı dikeyde esnetmek için flex container */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* NAV ve FOOTER arasında kalan alanı kaplayan ana kısım */
+main#main-container {
+    flex: 1;                      /* Kalan dikey alanı doldurur */
+    display: flex;               /* Yatayda iki kutu için flex layout */
+    flex-direction: row;
+    background-color: #D6C6DC;
+    margin: 0;
+    padding: 0;
+}
+
+
+.left-box, .right-box {
+    flex: 1;                      /* Yatayda eşit alan */
+    display: flex;               /* İçerik ortalaması için */
+    align-items: center;
+    justify-content: center;
+    position: relative;          /* Linklerin konumu için relative */
+    font-weight: bold;
+    font-size: 35px;
+    font-family: 'Trebuchet MS';
+    cursor: pointer;             /* Tıklanabilir olduğunu göstermek için */
+    transition: background-color 0.3s ease; /* Hover geçişi yumuşak olsun */
+}
+
+.left-box {
+    background-color: #3E2F5B;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+}
+.left-box:hover {
+    background-color: #2C1F40;
+}
+
+
+.right-box {
+    background-color: #C08FA8;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+}
+.right-box:hover {
+    background-color: #A6758D; 
+}
+
+
+/* .box-title: Varsayılan metin */
+.box-title {
+    display: block;
+}
+
+/* Tıklanınca açılan linkleri içeren mini panel */
+.link-container {
+    position: absolute;
+    top: 50%;                    /* Kutunun ortasına konumlandırmak için */
+    left: 50%;                   
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #D6C6DC;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: none;               /* Başlangıçta gizli */
+    z-index: 10;                 /* Diğer içeriklerin üzerinde */
+}
+
+/* Linklerin görünümü */
+.link-container a {
+    display: block;        /* Her link bir satır kaplasın (alt alta dizilsin) */
+    margin: 20px 0;         /* Linkler arasında dikey boşluk */
+    text-decoration: none;
+    color: #194675;
+    font-weight: bold;
+}
+
+
+/* Hover etkisi: Fare ilgili kutunun üzerine gelince */
+.left-box:hover .box-title,
+.right-box:hover .box-title {
+    display: none;
+}
+
+.left-box:hover .link-container,
+.right-box:hover .link-container {
+    display: block;
+}

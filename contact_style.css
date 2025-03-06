@@ -1,0 +1,88 @@
+/* Temel reset */
+* {
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ANA KAPSAYICI */
+.contact-container {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* BAŞLIK */
+.contact-container h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* İLETİŞİM KARTLARI */
+.contact-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* FOTO KISMI */
+.contact-photo {
+    flex: 1;
+    text-align: center;
+}
+
+.contact-photo img {
+    width: 120px; /* Fotoğraf boyutu */
+    height: 120px;
+    border-radius: 50%; /* Yuvarlak fotoğraf */
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+/* İLETİŞİM BİLGİLERİ */
+.contact-info {
+    flex: 2;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.contact-info h2 {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+/* LİNKLER */
+.contact-info a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
