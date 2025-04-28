@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Challenge Game</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- jQuery (we are allowed to use it) -->
+    <script src="../../Packages/Jquery/jquery-3.7.1.min.js"></script>
+
+    <!-- Link to external JS -->
+    <script src="questions.js" defer></script> <!-- For storing questions -->
+    <script src="game.js" defer></script> <!-- Main game logic -->
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>Programming Challenge!</h1>
+        </header>
+
+        <main>
+            <div id="progress-container">
+
+            </div>
+            
+            <section id="question-container">
+                <!-- Question will be injected here -->
+            </section>
+
+            <section id="options-container">
+                <!-- Answer options will be injected here -->
+            </section>
+
+            <div id="feedback-container">
+                <!-- Correct/Wrong feedback -->
+            </div>
+
+            <button id="next-button" style="display: none;">Next Question</button>
+        </main>
+
+        <footer>
+            <div id="score-container">
+                <!-- Score will be updated here -->
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

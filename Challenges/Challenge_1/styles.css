@@ -1,0 +1,135 @@
+/* styles.css */
+
+/* === Base Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === Body === */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* === App Container === */
+#app {
+    background: white;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* === Header === */
+header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+/* === Main === */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Question Text */
+#question-container {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Answer Options */
+#options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#progress-container {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.option-button {
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 1rem;
+}
+
+.option-button:hover:not(:disabled) {
+    background-color: #d5d5d5;
+}
+
+.option-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.correct-option {
+    background-color: #2ecc71 !important;
+    color: white;
+}
+
+.wrong-option {
+    background-color: #e74c3c !important;
+    color: white;
+}
+
+/* Feedback */
+#feedback-container {
+    min-height: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Next Button */
+#next-button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+    display: block;
+    transition: background-color 0.2s;
+}
+
+#next-button:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#score-container {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+}
