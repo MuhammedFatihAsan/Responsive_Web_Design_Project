@@ -64,7 +64,7 @@ const GameManager = (() => {
                 updateScore();
             } else {
                 $feedbackContainer
-                    .text('Wrong! Correct answer was: ${currentQuestion.correctAnswer}')
+                    .text(`Wrong! Correct answer was: ${currentQuestion.correctAnswer}`)
                     .css('color', 'red');
             }
             $feedbackContainer.fadeIn(200);
