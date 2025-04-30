@@ -1,28 +1,24 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Programming Challenge Game</title>
 
-    <!-- Link to external CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- External Styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-confirm@3.3.4/css/jquery-confirm.min.css" />
 
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-
-    <!-- jQuery (we are allowed to use it) -->
+    <!-- jQuery & Plugins -->
     <script src="../../Packages/Jquery/jquery-3.7.1.min.js"></script>
-    
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-
-    <!-- ✅ External jQuery Plugin: jquery-confirm -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-confirm@3.3.4/css/jquery-confirm.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery-confirm@3.3.4/dist/jquery-confirm.min.js"></script>
-  
-    <!-- Link to external JS -->
-    <script src="questions.js" defer></script> <!-- For storing questions -->
-    <script src="game.js" defer></script> <!-- Main game logic -->
+
+    <!-- Game Logic -->
+    <script src="questions.js" defer></script>
+    <script src="game.js" defer></script>
 </head>
 
 <body>
@@ -32,8 +28,11 @@
         </header>
 
         <main>
-            <div id="progress-container">
-
+            <!-- ✅ Progress Bar Container -->
+            <div id="progressbar-container">
+                <div id="progressbar">
+                    <div id="progress-label-inside">0%</div>
+                </div>
             </div>
 
             <section id="question-container">
@@ -57,31 +56,56 @@
             </div>
         </footer>
 
+        <!-- ✅ Accordion with assignment details -->
         <div id="accordion">
+            <h3>Assignment Summary</h3>
+            <div>
+                <p>This project was developed as part of the Interactive Web Application Sprint 4 assignment. Below is a
+                    summary of how the requirements were fulfilled:</p>
+                <ul>
+                    <li><strong>jQuery UI Widgets Used:</strong></li>
+                    <ul>
+                        <li><code>.tooltip()</code> – Added to answer option buttons</li>
+                        <li><code>.dialog()</code> – Used for the Game Over modal</li>
+                        <li><code>.accordion()</code> – Used for informational sections</li>
+                        <li><code>.progressbar()</code> – Shows current quiz progress with percentage</li>
+                    </ul>
+                    <li><strong>External jQuery Plugin:</strong></li>
+                    <ul>
+                        <li><code>jquery-confirm</code> – Used for restart confirmation with styled modal</li>
+                    </ul>
+                    <li><strong>Additional Features:</strong></li>
+                    <ul>
+                        <li>Animated feedback after each answer</li>
+                        <li>Score tracking and final score presentation</li>
+                        <li>Responsive and modular layout</li>
+                    </ul>
+                </ul>
+                <p>All logic was implemented in a modular and maintainable way using JavaScript, jQuery, and CSS,
+                    following best practices. The game is fully functional without requiring a backend or server.</p>
+            </div>
+
             <h3>How to Play</h3>
             <div>
-              <p>
-                Read each programming question carefully and choose the correct answer.
-                Immediate feedback will be shown after each answer. Try to get them all right!
-              </p>
+                <p>Read each programming question carefully and choose the correct answer. Immediate feedback will be
+                    shown after each answer. Try to get them all right!</p>
             </div>
+
             <h3>About This Game</h3>
             <div>
-              <p>
-                This game was built using HTML, CSS, JavaScript, and jQuery. It dynamically loads questions,
-                tracks your score, and provides animated feedback.
-              </p>
+                <p>This game was built using HTML, CSS, JavaScript, and jQuery. It dynamically loads questions, tracks
+                    your score, and provides animated feedback.</p>
             </div>
+
             <h3>Credits</h3>
             <div>
-              <p>
-                Designed and developed by Talha Gamga. jQuery UI widgets were used to meet educational project criteria.
-              </p>
+                <p>Designed and developed by Talha Gamga. jQuery UI widgets were used to meet educational project
+                    criteria.</p>
             </div>
-          </div>
-          
+        </div>
     </div>
 
+    <!-- Game Over Dialog -->
     <div id="gameover-dialog" title="Game Over" style="display: none;">
         <p id="final-score-text"></p>
     </div>

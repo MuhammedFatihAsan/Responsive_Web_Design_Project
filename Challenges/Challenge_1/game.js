@@ -17,7 +17,9 @@ const GameManager = (() => {
 
     // Initialize game
     function init() {
+        $("#progressbar").progressbar({ value: 0 });
         questions = QuestionBank.getAllQuestions(); // Fetch from QuestionBank
+        console.log("Questions loaded:", questions); // ✅ log to confirm
         currentQuestionIndex = 0;
         score = 0;
 
@@ -26,21 +28,44 @@ const GameManager = (() => {
         updateScore();
     }
 
+
     // Render current question and options
     function renderQuestion() {
+        // Safety check: no questions at all
+        if (!questions || questions.length === 0) {
+            $questionContainer.text("No questions available.");
+            return;
+        }
+
         const currentQuestion = questions[currentQuestionIndex];
+        console.log("Rendering question:", currentQuestion);
+
+        // If no more questions, end the quiz
         if (!currentQuestion) {
             showFinalScore();
             return;
         }
 
-        $progressContainer.text(`Question ${currentQuestionIndex + 1}/${questions.length}`);
+        // ✅ Safe to update progress now
+        // update numeric percentage
+        const progress = Math.round((currentQuestionIndex / questions.length) * 100);
+        $("#progress-label-inside").text(`${progress}%`);
 
-        $questionContainer.text(currentQuestion.questionText);
+        // tell the widget its value …
+        $("#progressbar").progressbar("value", progress);
+
+        // …and force the green bar to that same width
+        $("#progressbar .ui-progressbar-value").css("width", progress + "%");
+
+
+        // Update question and options
+        $progressContainer.text(`Question ${currentQuestionIndex + 1}/${questions.length}`);
+        $questionContainer.hide().text(currentQuestion.questionText).fadeIn(200);
         $optionsContainer.empty();
         $feedbackContainer.text('');
         $nextButton.hide();
 
+        // Create answer buttons
         currentQuestion.options.forEach(option => {
             const $button = $('<button></button>')
                 .addClass('option-button')
@@ -49,7 +74,10 @@ const GameManager = (() => {
                 .click(() => handleAnswer(option));
             $optionsContainer.append($button);
         });
+
+        // Activate tooltips again
         $('[title]').tooltip();
+
     }
 
     // Handle answer click
@@ -93,7 +121,7 @@ const GameManager = (() => {
             renderQuestion();
         });
     }
-    
+
     // Update score display
     function updateScore() {
         $scoreContainer.text(`Score: ${score}/${questions.length}`);
@@ -102,7 +130,8 @@ const GameManager = (() => {
     // Show final score
     function showFinalScore() {
         // Hide the main quiz UI
-        $('#app').hide();
+        // $('#app').hide();
+        $('#app').css('opacity', 0.3); // ✅ soft fade-out look
 
         // Set the score inside the dialog
         $('#final-score-text').text(`Your final score is ${score} out of ${questions.length}.`);
@@ -118,12 +147,19 @@ const GameManager = (() => {
                 }
             }
         });
+
+        $("#progressbar").progressbar("value", 100);
     }
 
     function restartGame() {
         $.confirm({
             title: 'Restart Game?',
             content: 'Are you sure you want to restart the quiz from the beginning?',
+            boxWidth: '300px',       // ✅ Smaller width
+            useBootstrap: false,     // ✅ Clean default style
+            backgroundDismiss: true, // ✅ Close if clicked outside
+            theme: 'modern',         // ✅ More modern look
+            closeIcon: true,         // ✅ Adds a little [x] in top-right
             buttons: {
                 confirm: {
                     text: 'Yes',
@@ -136,16 +172,14 @@ const GameManager = (() => {
                 },
                 cancel: {
                     text: 'No',
-                    action: function () {
-                        // Do nothing, close dialog
-                    }
+                    btnClass: 'btn-default'
                 }
             }
         });
+        $('#gameover-dialog').hide();
+        $('#app').css('opacity', 1); // ✅ bring full opacity back
+        GameManager.init();
     }
-
-
-
 
     // Expose init method
     return {
@@ -157,7 +191,11 @@ const GameManager = (() => {
 $(document).ready(() => {
     GameManager.init();
     console.log("jQuery UI version loaded:", $.ui.version);
-    $('#accordion').accordion();
+    $('#accordion').accordion({
+        collapsible: true,
+        active: false // Start with all sections closed (optional)
+    });
+    
     $.alert({
         title: 'Welcome to Programming Challenge!',
         content: 'Test your JavaScript knowledge. Answer each question, and try to score 100%. Good luck!',
