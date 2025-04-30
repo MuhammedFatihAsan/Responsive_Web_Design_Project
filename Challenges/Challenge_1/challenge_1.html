@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +9,17 @@
     <!-- Link to external CSS -->
     <link rel="stylesheet" href="styles.css">
 
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
     <!-- jQuery (we are allowed to use it) -->
     <script src="../../Packages/Jquery/jquery-3.7.1.min.js"></script>
+    
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
 
+    <!-- ✅ External jQuery Plugin: jquery-confirm -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-confirm@3.3.4/css/jquery-confirm.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery-confirm@3.3.4/dist/jquery-confirm.min.js"></script>
+  
     <!-- Link to external JS -->
     <script src="questions.js" defer></script> <!-- For storing questions -->
     <script src="game.js" defer></script> <!-- Main game logic -->
@@ -48,6 +56,34 @@
                 <!-- Score will be updated here -->
             </div>
         </footer>
+
+        <div id="accordion">
+            <h3>How to Play</h3>
+            <div>
+              <p>
+                Read each programming question carefully and choose the correct answer.
+                Immediate feedback will be shown after each answer. Try to get them all right!
+              </p>
+            </div>
+            <h3>About This Game</h3>
+            <div>
+              <p>
+                This game was built using HTML, CSS, JavaScript, and jQuery. It dynamically loads questions,
+                tracks your score, and provides animated feedback.
+              </p>
+            </div>
+            <h3>Credits</h3>
+            <div>
+              <p>
+                Designed and developed by Talha Gamga. jQuery UI widgets were used to meet educational project criteria.
+              </p>
+            </div>
+          </div>
+          
+    </div>
+
+    <div id="gameover-dialog" title="Game Over" style="display: none;">
+        <p id="final-score-text"></p>
     </div>
 </body>
 
