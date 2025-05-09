@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Simple Loop",
+        "difficulty": "Easy",
+        "description": "Rearrange the loop to print numbers from 0 to 2.",
+        "correctOrder": [
+            "for(let i = 0; i < 3; i++) {",
+            "  console.log(i);",
+            "}"
+        ]
+    },
+    {
+        "title": "Function Call Example",
+        "difficulty": "Medium",
+        "description": "Arrange the code to define and call a greeting function.",
+        "correctOrder": [
+            "function greet(name) {",
+            "  console.log('Hello ' + name);",
+            "}",
+            "greet('World');"
+        ]
+    }
+]

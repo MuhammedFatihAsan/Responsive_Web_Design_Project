@@ -1,15 +1,20 @@
 /* =========  GLOBAL LAYOUT  ========= */
-html, body {
+html,
+body {
     margin: 0;
+    padding: 0;
     height: 100%;
     display: flex;
-    flex-direction: column;   /* vertical stacking: header – main – footer */
-    min-height: 100vh;        /* full‑viewport baseline */
+    flex-direction: column;
+    /* vertical stacking: header – main – footer */
+    min-height: 100vh;
+    /* full‑viewport baseline */
 }
 
 /* MAIN AREA GROWS, PUSHING FOOTER DOWN WHEN NEEDED */
 main {
-    flex: 1;                  /* the magic line */
+    flex: 1;
+    /* the magic line */
 }
 
 /* =========  SHARED NAV  ========= */
@@ -18,6 +23,7 @@ nav {
     background: #333;
     padding: 10px;
 }
+
 nav ul {
     display: flex;
     justify-content: center;
@@ -25,7 +31,11 @@ nav ul {
     margin: 0;
     padding: 0;
 }
-nav li { margin: 0 15px; }
+
+nav li {
+    margin: 0 15px;
+}
+
 nav a,
 nav button {
     background: none;
@@ -35,7 +45,10 @@ nav button {
     font-size: 16px;
     text-decoration: none;
 }
-nav button { color: rgb(195, 255, 0); }
+
+nav button {
+    color: rgb(195, 255, 0);
+}
 
 /* =========  SHARED FOOTER  ========= */
 footer {
@@ -44,5 +57,6 @@ footer {
     text-align: center;
     padding: 10px;
     width: 100%;
+    box-sizing: border-box;
     /* NO position:absolute / fixed  → footer flows naturally */
 }

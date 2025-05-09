@@ -5,16 +5,6 @@
     box-sizing: border-box;
 }
 
-/* === Body === */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f2f2f2;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding: 20px;
-}
 
 /* === App Container === */
 #app {
@@ -44,11 +34,13 @@ main {
     gap: 20px;
 }
 
-/* === Question Text === */
+/* Question text */
 #question-container {
     font-size: 1.25rem;
-    font-weight: bold;
-    color: #444;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 /* === Answer Options === */
@@ -56,6 +48,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
 }
 
 .option-button {
@@ -110,12 +103,6 @@ main {
 
 #next-button:hover {
     background-color: #2980b9;
-}
-
-/* === Score and Footer === */
-footer {
-    margin-top: 20px;
-    text-align: center;
 }
 
 #score-container {
@@ -185,5 +172,66 @@ footer {
 
 /* === jQuery Confirm Dialog Overlay Styling === */
 .jconfirm.jconfirm-modern .jconfirm-bg {
-    background-color: rgba(0, 0, 0, 0.2); /* soft gray overlay */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* soft gray overlay */
+}
+
+#app-wrapper {
+    font-family: 'Arial', sans-serif;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    /* extra top‑spacing */
+}
+
+/* Card container — keeps game content neat and centred */
+#game-app {
+    background: #fff;
+    width: 100%;
+    max-width: 650px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Title inside game card */
+#game-app>h1 {
+    font-size: 1.7rem;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Align internal sections with consistent gap */
+#game-app section,
+#game-app #feedback-container,
+#game-app #score-container {
+    margin-top: 15px;
+}
+
+
+/* (Optional) keep the score container centering */
+#score-container {
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+}
+/* ───────── Question + Options Box ───────── */
+#question-box.question-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+/* Make buttons fill box width */
+#question-box .option-button {
+    width: 100%;
+    margin-top: 10px;
 }

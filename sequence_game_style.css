@@ -1,0 +1,101 @@
+/* Game Container */
+.sequence-game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 20px;
+}
+
+/* Game Card */
+#gameArea {
+    background: #fefefe;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+}
+
+/* Puzzle Title */
+#gameArea h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* Puzzle Description */
+.puzzle-description {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* Sortable Code List */
+#codeLines {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+#codeLines li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+    cursor: move;
+}
+#codeLines li:last-child {
+    border-bottom: none;
+}
+
+/* Submit Button */
+#submitOrder {
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+#submitOrder:hover {
+    background-color: #218838;
+}
+
+/* Score Display */
+#scoreTracker {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* Feedback Styling */
+#feedback {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+#feedback:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+#feedback:empty:before {
+    display: none;
+}
+#feedback:contains("Correct") {
+    color: #28a745;
+}
+#feedback:contains("Incorrect") {
+    color: #dc3545;
+}
+
+

@@ -13,8 +13,8 @@ const translations = {
         prp_2: "Preparation 2",
 
         challenge_H: "Challenge Arena",
-        chl_1: "Challenge 1",
-        chl_2: "Challenge 2",
+        chl_1: "Quizz Game",
+        chl_2: "Sequence Game",
 
         footer: "© 2025 Interactive Learning Platform. All rights reserved by Muhammed Fatih Asan & Talha Ubeydullah Gamga."
     },

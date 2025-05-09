@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 <li><a href="about.html" data-key="about">About Us</a></li>
                 <li><a href="tutorial.html" data-key="features">Tutorial</a></li>
                 <li><a href="contact.html" data-key="contact">Contact</a></li>
-                <li><a href="Challenges/Challenge_1/challenge_1.html" data-key="chl_1">Challenge_1</a></li> 
+                <li><a href="quizz_game.html" data-key="chl_1">Quizz Game</a></li> 
+                <li><a href="sequence_game.html" data-key="chl_2">Sequence Game</a></li> 
                 <li><button id="language-switcher" data-key="change_lg">🇹🇷 Use Turkish</button></li>
             </ul>
         </nav>
