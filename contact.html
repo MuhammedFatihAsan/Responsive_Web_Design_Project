@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="home_style.css">
     <link rel="stylesheet" href="contact_style.css">
 </head>
+
 <body>
 
     <!-- ORTAK NAVIGATION BAR -->
@@ -24,7 +26,8 @@
             <div class="contact-info">
                 <h2>Muhammed Fatih Asan</h2>
                 <p>📧 <strong>Email:</strong> <a href="mailto:m.fatihasan@hotmail.com">m.fatihasan@hotmail.com</a></p>
-                <p>📷 <strong>Instagram:</strong> <a href="https://www.instagram.com/muhammedfatihasan/" target="_blank">@muhammedfatihasan</a></p>
+                <p>📷 <strong>Instagram:</strong> <a href="https://www.instagram.com/muhammedfatihasan/"
+                        target="_blank">@muhammedfatihasan</a></p>
             </div>
         </section>
 
@@ -36,20 +39,34 @@
             <div class="contact-info">
                 <h2>Talha Ubeydullah Gamga</h2>
                 <p>📧 <strong>Email:</strong> <a href="mailto:talhagamga@gmail.com">talhagamga@gmail.com</a></p>
-                <p>📷 <strong>Instagram:</strong> <a href="https://www.instagram.com/talha.gamga/" target="_blank">@talha.gamga</a></p>
+                <p>📷 <strong>Instagram:</strong> <a href="https://www.instagram.com/talha.gamga/"
+                        target="_blank">@talha.gamga</a></p>
             </div>
         </section>
+
+        <section class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form id="contactForm">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="formFeedback" style="color: green; margin-top: 10px;"></p>
+        </section>
+
     </main>
 
     <!-- FOOTER -->
     <footer>
-        <p data-key="footer">© 2025 Interactive Learning Platform. All rights reserved 
+        <p data-key="footer">© 2025 Interactive Learning Platform. All rights reserved
             by Muhammed Fatih Asan & Talha Ubeydullah Gamga.
         </p>
     </footer>
 
     <script src="navigation_bar.js"></script>
     <script src="translate_script.js"></script>
-
+    <script src="contact_ajax.js"></script>
 </body>
+
 </html>
