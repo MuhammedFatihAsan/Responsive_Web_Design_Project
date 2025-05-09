@@ -1,43 +1,48 @@
-body { 
+/* =========  GLOBAL LAYOUT  ========= */
+html, body {
     margin: 0;
-    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;   /* vertical stacking: header – main – footer */
+    min-height: 100vh;        /* full‑viewport baseline */
 }
 
-/* NAVBAR */
+/* MAIN AREA GROWS, PUSHING FOOTER DOWN WHEN NEEDED */
+main {
+    flex: 1;                  /* the magic line */
+}
+
+/* =========  SHARED NAV  ========= */
 nav {
     font-family: Arial, sans-serif;
-    background-color: #333;
+    background: #333;
     padding: 10px;
 }
 nav ul {
-    list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
-nav ul li {
-    margin: 0 15px;
-}
-nav ul li a, nav ul li button {
-    color: white;
-    text-decoration: none;
+nav li { margin: 0 15px; }
+nav a,
+nav button {
     background: none;
     border: none;
+    color: #fff;
     cursor: pointer;
     font-size: 16px;
+    text-decoration: none;
 }
-nav ul li button {
-    color: rgb(195, 255, 0);
-}
+nav button { color: rgb(195, 255, 0); }
 
-/* FOOTER */
+/* =========  SHARED FOOTER  ========= */
 footer {
-    font-family: Arial, sans-serif;
+    background: #333;
+    color: #fff;
     text-align: center;
     padding: 10px;
-    background: #333;
-    color: white;
-    position: absolute;
     width: 100%;
-    bottom: 0;
+    /* NO position:absolute / fixed  → footer flows naturally */
 }
