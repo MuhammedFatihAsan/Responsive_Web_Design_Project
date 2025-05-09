@@ -6,11 +6,6 @@
     font-family: Arial, sans-serif;
 }
 
-main {
-    flex: 1;
-}
-
-
 /* Tüm sayfa arka planı — siteyle uyumlu açık lila */
 body {
     background-color: #F5F3FF;
