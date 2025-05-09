@@ -1,7 +1,14 @@
 /* Temel reset */
 * {
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
+}
+
+/* Tüm sayfa arka planı — siteyle uyumlu açık lila */
+body {
+    background-color: #F5F3FF;
 }
 
 /* ANA KAPSAYICI */
@@ -15,14 +22,14 @@
 /* BAŞLIKLAR */
 .about-content h1 {
     font-size: 2rem;
-    color: #333;
+    color: #1F2937; /* Koyu gri */
     margin-bottom: 15px;
 }
 
 /* PARAGRAFLAR */
 .about-content p {
     font-size: 1.1rem;
-    color: #555;
+    color: #374151; /* Metin için koyu gri ton */
     line-height: 1.6;
     margin-bottom: 20px;
 }
@@ -35,20 +42,22 @@
 
 .about-content ul li {
     font-size: 1.1rem;
-    color: #444;
-    background: #f4f4f4;
+    color: #1F2937;
+    background: #EDE9FE;         /* Lila kutular */
     margin: 10px auto;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
     max-width: 600px;
+    transition: background-color 0.3s ease;
 }
+
 
 /* FOOTER */
 footer {
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 10px;
-    background: #333;
+    background: #1F2937;         /* Navbar ile aynı koyu gri */
     color: white;
     position: absolute;
     width: 100%;

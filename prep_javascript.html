@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Basics Tutorial</title>
+  <link rel="stylesheet" href="home_style.css">
+  <link rel="stylesheet" href="prep_javascript_style.css" />
+</head>
+<body>
+
+  <!-- ORTAK NAVIGATION BAR -->
+  <div id="navigation_bar"></div>
+
+  <!-- === MAIN CONTENT === -->
+  <div class="tutorial-container">
+    <h1>Introduction to JavaScript</h1>
+    <p>JavaScript is a programming language used to add interactivity to web pages. It's one of the core technologies of the web, alongside HTML and CSS. Below are some key JavaScript concepts every beginner should learn.</p>
+
+    <!-- typeof undefined -->
+    <div class="tutorial-guide">
+      <h2>🔍 typeof Operator</h2>
+      <p>The <code>typeof</code> operator is used to determine the type of a value. For example, <code>typeof undefined</code> returns <code>'undefined'</code>.</p>
+      <pre><code>console.log(typeof undefined); // 'undefined'</code></pre>
+    </div>
+
+    <!-- const -->
+    <div class="tutorial-guide">
+      <h2>🔒 Declaring Constants with const</h2>
+      <p><code>const</code> is used to declare variables that cannot be reassigned. It provides block scope and is useful for fixed values.</p>
+      <pre><code>const pi = 3.14;
+// pi = 3.14159; // ❌ This will cause an error</code></pre>
+    </div>
+
+    <!-- getElementById -->
+    <div class="tutorial-guide">
+      <h2>🔗 Accessing Elements with getElementById</h2>
+      <p><code>document.getElementById()</code> is used to access an HTML element by its ID. If no element is found, it returns <code>null</code>.</p>
+      <pre><code>let element = document.getElementById('demo');
+console.log(element); // null if no element with ID "demo"</code></pre>
+    </div>
+
+    <!-- concat -->
+    <div class="tutorial-guide">
+      <h2>🧩 Combining Strings with concat()</h2>
+      <p>The <code>concat()</code> method joins two or more strings. It doesn't change the original strings.</p>
+      <pre><code>let a = "Hello, ";
+let b = "world!";
+let result = a.concat(b); // "Hello, world!"</code></pre>
+    </div>
+
+    <!-- comments -->
+    <div class="tutorial-guide">
+      <h2>📝 Writing Comments</h2>
+      <p>Comments are used to explain code and are ignored during execution. In JavaScript, single-line comments start with <code>//</code>.</p>
+      <pre><code>// This is a comment
+let x = 5; // This is also a comment</code></pre>
+    </div>
+  </div>
+
+  <!-- === FOOTER === -->
+  <footer>
+    &copy; 2025 Interactive Learning Platform. All rights reserved by Muhammed Fatih Asan & Talha Ubeydullah Gamga.
+  </footer>
+
+  <script src="navigation_bar.js"></script>
+
+</body>
+</html>

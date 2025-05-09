@@ -34,6 +34,7 @@ nav ul {
 
 nav li {
     margin: 0 15px;
+    position: relative; /* dropdown pozisyonu için gerekli */
 }
 
 nav a,
@@ -46,9 +47,53 @@ nav button {
     text-decoration: none;
 }
 
-nav button {
-    color: rgb(195, 255, 0);
+nav a.active {
+    color: #C4B5FD;
+    font-weight: bold;
+    border-bottom: 2px solid #C4B5FD;
+    padding-bottom: 2px;
 }
+
+/* ========= DROPDOWN MENÜ ========= */
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: #1F2937;
+    min-width: 180px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    flex-direction: column;
+}
+
+nav .dropdown-content li {
+    margin: 0;
+}
+
+nav .dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    font-size: 14px;
+    text-align: left;
+}
+
+nav .dropdown-content a:hover {
+    background-color: #4B5563;
+}
+
+nav li:hover .dropdown-content {
+    display: block;
+}
+
+nav li {
+    margin: 0 15px;
+    position: relative;
+    padding-bottom: 25px; /* ↓ Hover alanını genişletir */
+}
+
 
 /* =========  SHARED FOOTER  ========= */
 footer {

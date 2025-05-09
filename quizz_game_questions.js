@@ -5,47 +5,113 @@ const QuestionBank = (() => {
     const questions = [
         {
             id: 1,
-            questionText: "What does `typeof null` return in JavaScript?",
+            questionText: "What does `typeof undefined` return in JavaScript?",
             options: [
-                "'object'",
                 "'null'",
                 "'undefined'",
-                "'function'"
+                "'object'",
+                "'NaN'"
             ],
-            correctAnswer: "'object'"
+            correctAnswer: "'undefined'"
         },
         {
             id: 2,
-            questionText: "Which one is NOT a programming language?",
+            questionText: "Which HTML tag is used to link an external CSS file?",
             options: [
-                "Python",
-                "Java",
-                "HTML",
-                "C++"
+                "<script>",
+                "<style>",
+                "<link>",
+                "<css>"
             ],
-            correctAnswer: "HTML"
+            correctAnswer: "<link>"
         },
         {
             id: 3,
-            questionText: "What is the output of `console.log(2 + '2')`?",
+            questionText: "In JavaScript, which keyword is used to declare a constant variable?",
             options: [
-                "4",
-                "22",
-                "NaN",
-                "undefined"
+                "var",
+                "const",
+                "let",
+                "static"
             ],
-            correctAnswer: "22"
+            correctAnswer: "const"
         },
         {
             id: 4,
-            questionText: "Which symbol is used for comments in JavaScript?",
+            questionText: "Which HTML attribute is used to open a link in a new tab?",
             options: [
-                "//",
-                "/* */",
-                "#",
-                "<!-- -->"
+                "href",
+                "target",
+                "rel",
+                "newtab"
             ],
-            correctAnswer: "//"
+            correctAnswer: "target"
+        },
+        {
+            id: 5,
+            questionText: "What will `document.getElementById('demo')` return if no such element exists?",
+            options: [
+                "undefined",
+                "null",
+                "false",
+                "error"
+            ],
+            correctAnswer: "null"
+        },
+        {
+            id: 6,
+            questionText: "Which HTML tag defines a table row?",
+            options: [
+                "<td>",
+                "<tr>",
+                "<th>",
+                "<row>"
+            ],
+            correctAnswer: "<tr>"
+        },
+        {
+            id: 7,
+            questionText: "Which built-in method combines the text of two strings in JavaScript?",
+            options: [
+                "append()",
+                "combine()",
+                "concat()",
+                "attach()"
+            ],
+            correctAnswer: "concat()"
+        },
+        {
+            id: 8,
+            questionText: "Which HTML tag is used to insert a line break?",
+            options: [
+                "<break>",
+                "<br>",
+                "<lb>",
+                "<newline>"
+            ],
+            correctAnswer: "<br>"
+        },
+        {
+            id: 9,
+            questionText: "Which of these is a valid way to write a comment in JavaScript?",
+            options: [
+                "# comment",
+                "// comment",
+                "<!-- comment -->",
+                "-- comment"
+            ],
+            correctAnswer: "// comment"
+        },
+        {
+            id: 10,
+            questionText: "What does the `<input type='checkbox'>` element do?",
+            options: [
+                "Creates a button",
+                "Creates a single-line text field",
+                "Creates a multiple-choice selector",
+                "Creates a checkable box"
+            ],
+            correctAnswer: "Creates a checkable box"
         }
     ];
 

@@ -5,15 +5,28 @@
     box-sizing: border-box;
 }
 
+/* === Sayfa zemin rengi (tek tip) === */
+body {
+    background-color: #F5F3FF;
+}
+
+/* === App Wrapper (Sayfa Ortalaması ve Arka Plan Uyum) === */
+#app-wrapper {
+    font-family: 'Arial', sans-serif;
+    background-color: #F5F3FF;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
 
 /* === App Container === */
 #app {
-    background: white;
+    background: #F5F3FF;
     width: 100%;
     max-width: 600px;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.1);
 }
 
 /* === Header === */
@@ -24,7 +37,7 @@ header {
 
 header h1 {
     font-size: 2rem;
-    color: #333;
+    color: #1F2937;
 }
 
 /* === Main Layout === */
@@ -38,7 +51,7 @@ main {
 #question-container {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #222;
+    color: #1F2937;
     margin-bottom: 15px;
     text-align: center;
 }
@@ -53,31 +66,33 @@ main {
 
 .option-button {
     padding: 10px;
-    background-color: #eee;
-    border: 1px solid #ccc;
+    background-color: #EDE9FE;
+    border: 1px solid #C4B5FD;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, transform 0.2s;
     font-size: 1rem;
+    color: #1F2937;
 }
 
 .option-button:hover:not(:disabled) {
-    background-color: #d5d5d5;
+    background-color: #DDD6FE;
+    transform: scale(1.01);
 }
 
 .option-button:disabled {
-    background-color: #ccc;
+    background-color: #E5E7EB;
     cursor: not-allowed;
 }
 
 .correct-option {
-    background-color: #2ecc71 !important;
-    color: white;
+    background-color: #D1FAE5 !important;
+    color: #065F46;
 }
 
 .wrong-option {
-    background-color: #e74c3c !important;
-    color: white;
+    background-color: #FECACA !important;
+    color: #7F1D1D;
 }
 
 /* === Feedback === */
@@ -85,12 +100,13 @@ main {
     min-height: 20px;
     font-weight: bold;
     font-size: 1.1rem;
+    color: #374151;
 }
 
 /* === Next Button === */
 #next-button {
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #7C3AED;
     border: none;
     color: white;
     font-size: 1rem;
@@ -102,13 +118,16 @@ main {
 }
 
 #next-button:hover {
-    background-color: #2980b9;
+    background-color: #6D28D9;
 }
 
+/* === Score Container === */
 #score-container {
     font-size: 1rem;
     font-weight: bold;
-    color: #555;
+    color: #4B5563;
+    text-align: center;
+    margin-top: 20px;
 }
 
 /* === Accordion === */
@@ -129,8 +148,8 @@ main {
 #progressbar {
     height: 20px;
     width: 100%;
-    background-color: #eee;
-    border: 1px solid #ccc;
+    background-color: #EDE9FE;
+    border: 1px solid #C4B5FD;
     border-radius: 5px;
     overflow: hidden;
     position: relative;
@@ -147,7 +166,7 @@ main {
 }
 
 .ui-progressbar-value {
-    background-color: #4caf50 !important;
+    background-color: #7C3AED !important;
     height: 100%;
     transition: width 0.3s ease;
     display: block;
@@ -165,7 +184,7 @@ main {
     text-align: center;
     font-size: 0.9rem;
     font-weight: bold;
-    color: #000;
+    color: #1F2937;
     pointer-events: none;
     z-index: 2;
 }
@@ -173,64 +192,42 @@ main {
 /* === jQuery Confirm Dialog Overlay Styling === */
 .jconfirm.jconfirm-modern .jconfirm-bg {
     background-color: rgba(0, 0, 0, 0.2);
-    /* soft gray overlay */
 }
 
-#app-wrapper {
-    font-family: 'Arial', sans-serif;
-    background: #f2f2f2;
-    display: flex;
-    justify-content: center;
-    padding: 40px 20px;
-    /* extra top‑spacing */
-}
-
-/* Card container — keeps game content neat and centred */
+/* === Game Card === */
 #game-app {
-    background: #fff;
+    background: #F5F3FF;
     width: 100%;
     max-width: 650px;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.1);
 }
 
-/* Title inside game card */
-#game-app>h1 {
+#game-app > h1 {
     font-size: 1.7rem;
     text-align: center;
     margin-bottom: 25px;
-    color: #333;
+    color: #1F2937;
 }
 
-/* Align internal sections with consistent gap */
 #game-app section,
 #game-app #feedback-container,
 #game-app #score-container {
     margin-top: 15px;
 }
 
-
-/* (Optional) keep the score container centering */
-#score-container {
-    margin-top: 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #555;
-    text-align: center;
-}
 /* ───────── Question + Options Box ───────── */
 #question-box.question-card {
-    background: #ffffff;
-    border: 1px solid #ddd;
+    background: #FFFFFF;
+    border: 1px solid #DDD6FE;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 323px rgba(124, 58, 237, 0.05);
     text-align: center;
 }
 
-/* Make buttons fill box width */
 #question-box .option-button {
     width: 100%;
     margin-top: 10px;

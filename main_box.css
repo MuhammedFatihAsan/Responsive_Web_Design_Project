@@ -15,45 +15,42 @@ body {
 
 /* NAV ve FOOTER arasında kalan alanı kaplayan ana kısım */
 main#main-container {
-    flex: 1;                      /* Kalan dikey alanı doldurur */
-    display: flex;               /* Yatayda iki kutu için flex layout */
+    flex: 1;                      
+    display: flex;               
     flex-direction: row;
-    background-color: #D6C6DC;
+    background-color: #D8B4FE;  /* Orta çizgi ve geçiş alanı */
     margin: 0;
     padding: 0;
 }
 
-
 .left-box, .right-box {
-    flex: 1;                      /* Yatayda eşit alan */
-    display: flex;               /* İçerik ortalaması için */
+    flex: 1;                      
+    display: flex;               
     align-items: center;
     justify-content: center;
-    position: relative;          /* Linklerin konumu için relative */
+    position: relative;          
     font-weight: bold;
     font-size: 35px;
     font-family: 'Trebuchet MS';
-    cursor: pointer;             /* Tıklanabilir olduğunu göstermek için */
-    transition: background-color 0.3s ease; /* Hover geçişi yumuşak olsun */
+    cursor: pointer;             
+    transition: background-color 0.3s ease;
 }
 
 .left-box {
-    background-color: #3E2F5B;
+    background-color: #EDE9FE; /* Sol kutunun arka planı */
     clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
 }
 .left-box:hover {
-    background-color: #2C1F40;
+    background-color: #DDD6FE; /* Hover’da biraz daha koyu */
 }
 
-
 .right-box {
-    background-color: #C08FA8;
+    background-color: #C4B5FD; /* Sağ kutunun arka planı */
     clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
 }
 .right-box:hover {
-    background-color: #A6758D; 
+    background-color: #B794F4; /* Hover’da biraz daha koyu */
 }
-
 
 /* .box-title: Varsayılan metin */
 .box-title {
@@ -63,27 +60,37 @@ main#main-container {
 /* Tıklanınca açılan linkleri içeren mini panel */
 .link-container {
     position: absolute;
-    top: 50%;                    /* Kutunun ortasına konumlandırmak için */
+    top: 50%;                    
     left: 50%;                   
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: #D6C6DC;
+    background-color: #EDE9FE;   /* Kutularla uyumlu pastel mor */
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    display: none;               /* Başlangıçta gizli */
-    z-index: 10;                 /* Diğer içeriklerin üzerinde */
+    border: 1px solid #C4B5FD;   /* Uyumlu açık mor çerçeve */
+    border-radius: 8px;
+    display: none;               
+    z-index: 10;
 }
 
 /* Linklerin görünümü */
 .link-container a {
-    display: block;        /* Her link bir satır kaplasın (alt alta dizilsin) */
-    margin: 20px 0;         /* Linkler arasında dikey boşluk */
+    display: block;
+    margin: 20px 0;
     text-decoration: none;
-    color: #194675;
+    color: #1F2937;              /* Okunaklı koyu gri */
     font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 6px;
+    background-color: #D8B4FE;   /* Açık lila arka plan */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
+/* Hover efekti: link buton gibi hissedilsin */
+.link-container a:hover {
+    background-color: #C084FC;   /* Hover’da koyu mor */
+    color: #FFFFFF;
+    transform: scale(1.03);
+}
 
 /* Hover etkisi: Fare ilgili kutunun üzerine gelince */
 .left-box:hover .box-title,

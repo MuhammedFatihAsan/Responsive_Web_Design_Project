@@ -1,7 +1,15 @@
 /* Temel reset */
 * {
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
+}
+
+/* Sayfa arka planı */
+body {
+    background-color: #F5F3FF;
+    color: #1F2937;
 }
 
 /* ANA KAPSAYICI */
@@ -15,7 +23,7 @@
 /* BAŞLIK */
 .contact-container h1 {
     font-size: 2rem;
-    color: #333;
+    color: #1F2937;
     margin-bottom: 30px;
 }
 
@@ -24,11 +32,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f9f9f9;
+    background: #EDE9FE;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(124, 58, 237, 0.1);
 }
 
 /* FOTO KISMI */
@@ -38,11 +46,11 @@
 }
 
 .contact-photo img {
-    width: 120px; /* Fotoğraf boyutu */
+    width: 120px;
     height: 120px;
-    border-radius: 50%; /* Yuvarlak fotoğraf */
+    border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #ddd;
+    border: 3px solid #C4B5FD;
 }
 
 /* İLETİŞİM BİLGİLERİ */
@@ -54,42 +62,46 @@
 
 .contact-info h2 {
     font-size: 1.5rem;
-    color: #222;
+    color: #1F2937;
     margin-bottom: 10px;
 }
 
 .contact-info p {
     font-size: 1.1rem;
-    color: #444;
+    color: #4B5563;
     margin-bottom: 5px;
 }
 
 /* LİNKLER */
 .contact-info a {
     text-decoration: none;
-    color: #007bff;
+    color: #7C3AED;
     font-weight: bold;
+    transition: color 0.2s ease;
 }
 
 .contact-info a:hover {
     text-decoration: underline;
+    color: #6D28D9;
 }
 
+/* İLETİŞİM FORMU */
 .contact-form {
     margin-top: 50px;
     padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: #F3E8FF;
+    border: 1px solid #C4B5FD;
     border-radius: 8px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.1);
 }
 
 .contact-form h2 {
     margin-bottom: 15px;
     text-align: center;
+    color: #1F2937;
 }
 
 .contact-form input,
@@ -97,29 +109,32 @@
     width: 100%;
     padding: 10px;
     margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #DDD6FE;
+    border-radius: 6px;
     box-sizing: border-box;
     font-size: 1rem;
+    background-color: #FFFFFF;
+    color: #1F2937;
 }
 
 .contact-form button {
     width: 100%;
     padding: 12px;
-    background-color: #007BFF;
+    background-color: #7C3AED;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
-    background-color: #0056b3;
+    background-color: #6D28D9;
 }
 
 #formFeedback {
     text-align: center;
     font-weight: bold;
+    color: #4B5563;
 }

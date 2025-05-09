@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Basics Tutorial</title>
+  <link rel="stylesheet" href="home_style.css">
+  <link rel="stylesheet" href="prep_html_style.css" />
+</head>
+<body>
+
+  <!-- ORTAK NAVIGATION BAR -->
+  <div id="navigation_bar"></div>
+
+  <!-- === MAIN CONTENT === -->
+  <div class="tutorial-container">
+    <h1>Introduction to HTML</h1>
+    <p>HTML (HyperText Markup Language) is the standard language used to create web pages. It structures content using elements and tags. Below are essential HTML concepts every beginner should learn.</p>
+
+    <!-- LINK TAG -->
+    <div class="tutorial-guide">
+      <h2>🔗 Linking External CSS Files</h2>
+      <p>Use the <code>&lt;link&gt;</code> tag to connect a CSS file to your HTML. This tag is placed in the <code>&lt;head&gt;</code> section.</p>
+      <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+    </div>
+
+    <!-- target="_blank" -->
+    <div class="tutorial-guide">
+      <h2>🪟 Opening Links in a New Tab</h2>
+      <p>The <code>target="_blank"</code> attribute lets you open a link in a new browser tab.</p>
+      <pre><code>&lt;a href="https://example.com" target="_blank"&gt;Visit&lt;/a&gt;</code></pre>
+    </div>
+
+    <!-- <br> -->
+    <div class="tutorial-guide">
+      <h2>↩️ Line Breaks</h2>
+      <p>Use the <code>&lt;br&gt;</code> tag to create a line break inside your content.</p>
+      <pre><code>Hello!&lt;br&gt;How are you?</code></pre>
+    </div>
+
+    <!-- <tr> -->
+    <div class="tutorial-guide">
+      <h2>📊 Table Rows</h2>
+      <p>Tables use <code>&lt;tr&gt;</code> to define rows, and <code>&lt;td&gt;</code> or <code>&lt;th&gt;</code> to define cells.</p>
+      <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Row 1, Cell 1&lt;/td&gt;
+    &lt;td&gt;Row 1, Cell 2&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+    </div>
+
+    <!-- Checkbox -->
+    <div class="tutorial-guide">
+      <h2>☑️ Checkboxes</h2>
+      <p>Checkboxes let users select one or more options. Example:</p>
+      <pre><code>&lt;input type="checkbox" name="subscribe" checked&gt; Subscribe</code></pre>
+    </div>
+  </div>
+
+  <!-- === FOOTER === -->
+  <footer>
+    &copy; 2025 Interactive Learning Platform. All rights reserved by Muhammed Fatih Asan & Talha Ubeydullah Gamga.
+  </footer>
+
+  <script src="navigation_bar.js"></script>
+
+</body>
+</html>

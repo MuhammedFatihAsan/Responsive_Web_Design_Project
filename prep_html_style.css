@@ -1,0 +1,77 @@
+/* === Temel Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* === Sayfa Arka Planı === */
+body {
+    background-color: #F5F3FF; /* Genel açık lila tonu */
+    color: #1F2937; /* Koyu gri metin */
+}
+
+/* === Konteyner === */
+.tutorial-container {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* === Başlık === */
+.tutorial-container h1 {
+    font-size: 2.5rem;
+    color: #1F2937;
+    margin-bottom: 20px;
+}
+
+/* === Genel Paragraf === */
+.tutorial-container p {
+    font-size: 1.2rem;
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* === Rehber Kutuları === */
+.tutorial-guide {
+    background-color: #EDE9FE; /* Rehber kutusu arka planı */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(124, 58, 237, 0.1);
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Rehber Başlığı */
+.tutorial-guide h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #4B5563;
+}
+
+/* Kod örnekleri */
+.tutorial-guide code {
+    display: block;
+    background-color: #F3E8FF;
+    color: #6B21A8;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: Consolas, monospace;
+    white-space: pre-wrap;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1F2937; /* Koyu gri */
+    color: white;
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+}

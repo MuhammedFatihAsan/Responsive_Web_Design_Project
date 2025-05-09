@@ -19,5 +19,48 @@
             "}",
             "greet('World');"
         ]
+    },
+    {
+        "title": "Simple Conditional",
+        "difficulty": "Easy",
+        "description": "Rearrange the code to check if a number is positive.",
+        "correctOrder": [
+            "let number = 5;",
+            "if (number > 0) {",
+            "  console.log('Positive');",
+            "}"
+        ]
+    },
+    {
+        "title": "Array Iteration",
+        "difficulty": "Medium",
+        "description": "Rearrange the code to loop through an array and print its elements.",
+        "correctOrder": [
+            "let fruits = ['apple', 'banana', 'cherry'];",
+            "for (let i = 0; i < fruits.length; i++) {",
+            "  console.log(fruits[i]);",
+            "}"
+        ]
+    },
+    {
+        "title": "Object Property Access",
+        "difficulty": "Easy",
+        "description": "Rearrange the code to define an object and log its property.",
+        "correctOrder": [
+            "let person = { name: 'Alice', age: 30 };",
+            "console.log(person.name);"
+        ]
+    },
+    {
+        "title": "Nested Loop Example",
+        "difficulty": "Hard",
+        "description": "Rearrange the code to print pairs of numbers using nested loops.",
+        "correctOrder": [
+            "for (let i = 1; i <= 2; i++) {",
+            "  for (let j = 1; j <= 2; j++) {",
+            "    console.log(i + ',' + j);",
+            "  }",
+            "}"
+        ]
     }
 ]

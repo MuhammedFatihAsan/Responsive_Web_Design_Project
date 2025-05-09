@@ -1,27 +1,47 @@
-// Navigasyon barını ekle
 document.addEventListener("DOMContentLoaded", function () {
-    const navbarHTML = `
-        <nav>
-            <ul>
-                <li><a href="index.html" data-key="home">Home</a></li>
-                <li><a href="about.html" data-key="about">About Us</a></li>
-                <li><a href="tutorial.html" data-key="features">Tutorial</a></li>
-                <li><a href="contact.html" data-key="contact">Contact</a></li>
-                <li><a href="quizz_game.html" data-key="chl_1">Quizz Game</a></li> 
-                <li><a href="sequence_game.html" data-key="chl_2">Sequence Game</a></li> 
-                <li><button id="language-switcher" data-key="change_lg">🇹🇷 Use Turkish</button></li>
-            </ul>
-        </nav>
-    `;
+  const navbarHTML = `
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="tutorial.html">Tutorial</a></li>
+        <li><a href="contact.html">Contact</a></li>
 
-    // Sayfadaki navbar div'ini bul ve içine navigasyon barını ekle
-    document.getElementById("navigation_bar").innerHTML = navbarHTML;
+        <li class="dropdown">
+          <a href="#">Prep Zone ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="prep_html.html">Prep to "HTML"</a></li>
+            <li><a href="prep_javascript.html">Prep to ".JavaScript"</a></li>
+          </ul>
+        </li>
 
-    // Buton event listener'ı ekle (navigation bar eklendikten sonra)
-    document.getElementById("language-switcher").addEventListener("click", function () {
-        // translate_script içindeki fonksiyonları çağırmak için
-        if (typeof changeLanguage === "function") {
-            changeLanguage();
-        }
+        <li class="dropdown">
+          <a href="#">Challenge Arena ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="quizz_game.html">Quizz Game</a></li>
+            <li><a href="sequence_game.html">Sequence Game</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  `;
+
+  document.getElementById("navigation_bar").innerHTML = navbarHTML;
+
+  const langButton = document.getElementById("language-switcher");
+  if (langButton) {
+    langButton.addEventListener("click", function () {
+      if (typeof changeLanguage === "function") {
+        changeLanguage();
+      }
     });
+  }
+
+  const currentPage = window.location.pathname.split("/").pop();
+  document.querySelectorAll("nav a").forEach(link => {
+    const linkHref = link.getAttribute("href");
+    if (linkHref === currentPage || (currentPage === "" && linkHref === "index.html")) {
+      link.classList.add("active");
+    }
+  });
 });
